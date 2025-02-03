@@ -31,7 +31,7 @@ class CustomProductCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Center(
-              child: Image.asset(
+              child: Image.network(
                 image,
                 width: double.infinity,  
                 height: 100,  
