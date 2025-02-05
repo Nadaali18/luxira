@@ -118,6 +118,8 @@ class _HomeViewState extends State<HomeView> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
+
+
     );
   }
 }

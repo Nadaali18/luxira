@@ -9,13 +9,8 @@ class ProductApi {
   Future<List<ProductItem>> getProducts() async {
     try {
       Response response = await dio.get('https://fakestoreapi.com/products');
-
       List<ProductItem> products = (response.data as List).map((item) => ProductItem.fromJson(item)).toList();
       return products;
-    } on DioException catch (e) {
-      final String errorMessage = e.response?.data['error']['message'] ??
-          'Oops, there was an error. Try later.';
-      throw Exception(errorMessage);
     } catch (e) {
       log(e.toString());
       throw Exception('Oops, there was an error. Try later.');
